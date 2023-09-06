@@ -1,0 +1,16 @@
+div{
+  background-color: #000;
+  color:#ED1C24;
+  }
+
+
+.scroll-to-top i {
+  font-size: 24px;
+    color: #ED1C24;
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      padding: 10px 15px;
+      cursor: pointer;
+      background-color:none !important;
+}

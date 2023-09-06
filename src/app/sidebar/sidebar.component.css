@@ -1,0 +1,62 @@
+:root {
+  --animate-duration: 1s;
+}
+.animate {
+   --animate-duration: 5s;
+ }
+a{
+  color:#ED1C24!important;
+  background-color:#000 !important;
+  font-size:20px;
+  border:none  !important;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px!important;
+  background-color: #000;
+  position: fixed;
+  height: 80%;
+  overflow: auto;
+  top:20%;
+  color:#ED1C24!important;
+}
+
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #ED1C24 ;
+  color: white;
+}
+
+@media (max-width: 2px) {
+  .sidebar {
+    width: 100%; /* Adjust the width as needed */
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+
+  }
+  .navbar-toggler-icon{
+   position: fixed;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        background-color: red;
+  }
+  .sidebar a.active,
+  .sidebar a:hover:not(.active) {
+    background-color: #000;
+    color: white;
+  }
+}
+
+

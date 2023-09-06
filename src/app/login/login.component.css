@@ -1,0 +1,5 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+span{
+color:red;
+font-size:20px;
+}
