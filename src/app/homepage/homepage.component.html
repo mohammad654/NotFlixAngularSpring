@@ -1,0 +1,26 @@
+<main class="mt-5">
+  <div class="container">
+    <div class="row mt-2">
+      <div class="col-12 col-md-6 col-lg-4 mt-2" *ngFor="let movie of data">
+        <div class="card" style="width: 18rem; background-color: #000;">
+          <div class="card-body">
+            <iframe width="250" height="300" allowfullscreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              [src]="'https://www.youtube.com/embed/'+movie.url | safe"></iframe>
+
+            <div class="card-text text-light"><strong>Movie</strong> : {{movie.movie}}</div>
+            <div class="card-text text-light">
+              <strong>Description</strong> : <span style="font-size:15px">{{movie.description}} description</span>
+<!--              <span [ngClass]="{'collapse': !showFullContent}">Curabitur aliquamero, in lacinia ante metus eu lectus.</span>-->
+<!--              <a href="javascript:void( );" (click)="toggleContent()">Read {{ showFullContent ? 'Less' : 'More' }}</a>-->
+            </div>
+            <div class="card-text text-light mb-2"><strong>Audio</strong> : {{movie.audio}}</div>
+            <div class="card-text text-light"><strong>Subtitle</strong> : {{movie.subtitle}}</div>
+            <div class="card-text text-light"><strong>Genre</strong> : {{movie.genre}}</div>
+            <a href="movieinfo" class="btn btn-light w-100">Info </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

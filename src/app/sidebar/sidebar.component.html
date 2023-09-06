@@ -1,0 +1,50 @@
+
+<div class="sidebar  ">
+  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse ">
+    <div class="position-sticky">
+      <button class="navbar-toggler ms-5 animate " type="button" (click)="toggleNavbar()">
+        <i class="bi bi-google-play navbar-toggler-icon text-danger fs-3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse animate__animated " [ngClass]="{'show': isNavbarOpen}" id="navbarNav">
+      <div class="list-group list-group-flush mx-3 mt-4 ">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+
+        <a routerLink="" class=" list-group-item list-group-item-action  ripple  ">
+          <i class="fas fa-tachometer-alt fa-fw me-3 "></i><span>All</span>
+        </a>
+
+         <a routerLink="genre/action" class=" list-group-item list-group-item-action  ripple  ">
+          <i class="fas fa-tachometer-alt fa-fw me-3 "></i><span>Action</span>
+        </a>
+
+        <a routerLink="genre/drama" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-chart-area fa-fw me-3 "></i><span>Drama</span>
+        </a>
+
+        <a routerLink="/horror" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-lock fa-fw me-3"></i><span>Horror</span>
+        </a>
+
+        <a routerLink="/western" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-chart-line fa-fw me-3"></i><span>Western</span>
+        </a>
+
+        <a routerLink="/comedy" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-chart-pie fa-fw me-3"></i><span>Comedy</span>
+        </a>
+
+        <a routerLink="/crime" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="bi bi-chart-bar fa-fw me-3"></i><span>Crime</span>
+        </a>
+
+        <a routerLink="/fantasy" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-globe fa-fw me-3"></i><span>Fantasy</span>
+        </a>
+
+        </ul>
+      </div>
+    </div>
+    </div>
+  </nav>
+</div>

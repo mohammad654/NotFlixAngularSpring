@@ -1,0 +1,43 @@
+
+<h1 style="margin-top:150px; " class=" text-center  text-light" >Sign in</h1>
+
+<div class="d-flex justify-content-center text-light"  >
+  <form    [formGroup]="loginForm"  (ngSubmit)="login()">
+
+    <div *ngIf="loginForm.errors" class="alert alert-danger">Username or password invalid.</div>
+
+      <div class="row">
+        <div class="form-outline mb-4 col-12 ">
+          <label class="form-label" for="form2Example1">Username</label>
+          <input type="email" id="form2Example1" class="form-control" formControlName="username" />
+          <div class="alert alert-danger "
+            *ngIf="getUserName?.touched && getUserName?.invalid">
+                <div *ngIf="getUserName?.errors?.['required']" class="">Username is required.</div>
+                 <div *ngIf="getUserName?.errors?.['minlength']">
+                   Username should be at least {{ getUserName?.errors?.['minlength']?.requiredLength }} characters.</div>
+                <div *ngIf="getUserName?.errors?.['pattern']" class="">only letters and spaces are allowed.</div>
+                <div *ngIf="getUserName?.errors?.['shouldBeUnique']">Username {{ getUserName?.value }} is already taken.</div>
+             </div>
+           </div>
+
+        <div class="form-outline mb-4 col-12">
+          <label class="form-label" for="form2Example2">Password</label>
+          <input type="password" id="form2Example2" class="form-control"  formControlName="password"/>
+
+          <div class="alert alert-danger mb-1 pb-1" *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+            <div *ngIf="loginForm.get('password')?.errors?.['required']" >Password is required.</div>
+            <div *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 8 characters long.</div>
+            <div *ngIf="loginForm.get('password')?.errors?.['pattern']" >Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character.</div>
+          </div>
+        </div>
+
+        <div class="form-outline mb-4 col-12">
+          <button type="submit" class="btn btn-light form-control" [disabled]="loginForm.invalid" >Sign in</button>
+        </div>
+
+      </div>
+  </form>
+</div>
+
+
+

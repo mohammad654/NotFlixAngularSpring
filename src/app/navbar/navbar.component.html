@@ -1,0 +1,42 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top  container-fluid bg-info">
+
+  <a class="navbar-brand ms-5" routerLink="" style="margin-right:20%">
+    <img src="assets/logo.png" height="70" alt="" loading="lazy"/>
+  </a>
+
+  <button class="navbar-toggler bg-light navbar-toggler-animated animate__animated animate__bounce animate__repeat-2" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon "></span>
+  </button>
+
+  <div class="collapse navbar-collapse animate__animated" [ngClass]="{'show': isNavbarOpen}" id="navbarNav">
+    <form class=" pe-3">
+
+      <input
+        *ngIf="search"
+        autocomplete="off"
+        type="search"
+        class="form-control rounded text-center mb-2 "
+        placeholder='Search'
+        style="min-width: 400px;"
+      />
+    </form>
+    <ul class="navbar-nav ms-auto animate__animated animate__fadeInRight me-5">
+
+      <li class="nav-item me-3 me-lg-0 ">
+        <button type="button" class=" form-control btn bg-primary text-light px-5 "
+            (click)="hideSearch()"
+           routerLink="/{{link}}"
+        >{{text}}</button>
+      </li>
+      <li class="nav-item mx-3  me-lg-0">
+        <button type="button" class="form-control btn bg-primary text-light px-5"
+                (click)="navigateToLogin()"
+
+        >admin</button>
+      </li>
+
+    </ul>
+  </div>
+</nav>
